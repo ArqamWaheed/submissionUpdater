@@ -2,6 +2,19 @@ import fs from 'fs/promises';
 import path from 'path';
 import * as cheerio from 'cheerio';
 
+// Some environments (certain Node/undici combinations) expect a global File
+// web class to exist. On some CI runners this is missing and causes undici
+// to throw: "ReferenceError: File is not defined". Provide a lightweight
+// polyfill from the Node `buffer` module when available.
+if (typeof File === 'undefined') {
+  try {
+    const { File: NodeFile } = await import('buffer');
+    if (NodeFile) globalThis.File = NodeFile;
+  } catch (e) {
+    // ignore — fallback will be attempted by Playwright if needed
+  }
+}
+
 // Target page to scrape
 const url = 'https://seecs.nust.edu.pk/program/bachelor-of-science-in-data-science-for-fall-2025-onwards';
 // Helper: detect course code and credits
