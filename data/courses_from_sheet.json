@@ -1,0 +1,384 @@
+{
+  "sourceFile": "(09222025)_BSDS_BSAI_curriculum_for_website (2025 onwards).json",
+  "convertedAt": "2025-11-21T10:16:17.005Z",
+  "title": "Curriculum (sheet)",
+  "semesters": [
+    {
+      "name": "Semester 1",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "CS-108",
+          "title": "Application of Info. & Comm. Technologies",
+          "credits": "2+1"
+        },
+        {
+          "serial": "2",
+          "code": "CS-110",
+          "title": "Fundamentals of Computer Programming",
+          "credits": "3+1"
+        },
+        {
+          "serial": "3.a",
+          "code": "MATH-161",
+          "title": "Discrete Mathematics",
+          "credits": "3+0"
+        },
+        {
+          "serial": "4.a",
+          "code": "MATH-101",
+          "title": "Calculus & Analytical Geometry",
+          "credits": "3+0"
+        },
+        {
+          "serial": "5",
+          "code": "HU-114",
+          "title": "Functional English",
+          "credits": "3+0"
+        },
+        {
+          "serial": "6",
+          "code": "HU-131",
+          "title": "Understanding of Holy Quran - I / Fehm-e-Quran - I",
+          "credits": "0+1"
+        }
+      ]
+    },
+    {
+      "name": "For Pre- medical Students only (Semester-1)",
+      "courses": [
+        {
+          "serial": "3.b",
+          "code": "MATH-162",
+          "title": "Pre-Mathematics-1 (in place of MATH-161)",
+          "credits": "3+0"
+        },
+        {
+          "serial": "4.b",
+          "code": "MATH-163",
+          "title": "Pre-Mathematics-2 (in place of MATH-101)",
+          "credits": "3+0"
+        }
+      ]
+    },
+    {
+      "name": "Semester 2",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "CS-212",
+          "title": "Object Oriented Programming (OOP)",
+          "credits": "3+1"
+        },
+        {
+          "serial": "2",
+          "code": "CS-220",
+          "title": "Database Systems",
+          "credits": "3+1"
+        },
+        {
+          "serial": "3",
+          "code": "EE-223",
+          "title": "Digital Logic Design (DLD)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "4.a",
+          "code": "MATH-234",
+          "title": "Multivariable Calculus",
+          "credits": "3+0"
+        },
+        {
+          "serial": "5.a",
+          "code": "MATH-222",
+          "title": "Linear Algebra",
+          "credits": "3+0"
+        },
+        {
+          "serial": "6",
+          "code": "HU-132",
+          "title": "Understanding of Holy Quran - II / Fehm-e-Quran - II",
+          "credits": "0+1"
+        }
+      ]
+    },
+    {
+      "name": "For Pre- medical Students only (Semester-2)",
+      "courses": [
+        {
+          "serial": "4.b",
+          "code": "MATH-161",
+          "title": "Discrete Mathematics (in place of MATH-234)",
+          "credits": "3+0"
+        },
+        {
+          "serial": "5.b",
+          "code": "MATH-101",
+          "title": "Calculus & Analytical Geometry (in place of MATH-222",
+          "credits": "3+0"
+        }
+      ]
+    },
+    {
+      "name": "Summer Semester (For pre medical student only)",
+      "courses": []
+    },
+    {
+      "name": "For Pre- medical Students only (Summer)",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "MATH-234",
+          "title": "Multivariable Calculus",
+          "credits": "3+0"
+        },
+        {
+          "serial": "2",
+          "code": "MATH-222",
+          "title": "Linear Algebra",
+          "credits": "3+0"
+        }
+      ]
+    },
+    {
+      "name": "Semester 3",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "CS-250",
+          "title": "Data Structures & Algorithms (DSA)",
+          "credits": "3+1"
+        },
+        {
+          "serial": "2",
+          "code": "CS-353",
+          "title": "Information Security",
+          "credits": "2+1"
+        },
+        {
+          "serial": "3",
+          "code": "CS-272",
+          "title": "Artificial Intelligence",
+          "credits": "2+1"
+        },
+        {
+          "serial": "4",
+          "code": "EE-347",
+          "title": "Computer Networks",
+          "credits": "2+1"
+        },
+        {
+          "serial": "5",
+          "code": "MATH-361",
+          "title": "Probability & Statistics",
+          "credits": "3+0"
+        },
+        {
+          "serial": "6",
+          "code": "HU-101",
+          "title": "Islamic Studies OR Religious Education / Ethics for Non-Muslim students",
+          "credits": "2+0"
+        }
+      ]
+    },
+    {
+      "name": "Semester 4",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "CS-234",
+          "title": "Computer Organization & Assembly Language",
+          "credits": "2+1"
+        },
+        {
+          "serial": "2",
+          "code": "DS-401",
+          "title": "Introduction to Data Science (Domain Core 1)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "3",
+          "code": "STAT-222",
+          "title": "Advance Statistics  (Domain Core 2)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "4",
+          "code": "Phy-102",
+          "title": "Applied Physics (Any Course from General Education Requirements)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "5",
+          "code": "ENGL-104",
+          "title": "Expository Writing",
+          "credits": "3+0"
+        },
+        {
+          "serial": "6",
+          "code": "CS-3XX",
+          "title": "DS Elective-1 (ML)",
+          "credits": "2+1"
+        }
+      ]
+    },
+    {
+      "name": "Semester 5",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "CS-333",
+          "title": "Operating System",
+          "credits": "2+1"
+        },
+        {
+          "serial": "2",
+          "code": "DS-311",
+          "title": "Data Mining (Domain Core 3)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "3",
+          "code": "CS-366",
+          "title": "Data Visualization (Domain Core 4)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "4",
+          "code": "MGT-164",
+          "title": "Introduction to Management (Any Course from General Education Requirements)",
+          "credits": "2+0"
+        },
+        {
+          "serial": "5",
+          "code": "CS-3XX",
+          "title": "DS Elective-2 (Web Eng)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "6",
+          "code": "CS-3XX",
+          "title": "DS Elective-3 (DL)",
+          "credits": "2+1"
+        }
+      ]
+    },
+    {
+      "name": "Semester 6",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "DS-312",
+          "title": "Data Warehousing and Business Intelligence (Domain Core 5)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "2",
+          "code": "CS-347",
+          "title": "Parallel & Distributed Computing (Domain Core 6)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "3",
+          "code": "HU-127",
+          "title": "Ideology and Constitution of Pakistan",
+          "credits": "2+0"
+        },
+        {
+          "serial": "4",
+          "code": "CS-3XX",
+          "title": "DS Elective-4 (NLP)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "5",
+          "code": "CS-3XX",
+          "title": "DS Elective-5 (CV)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "6",
+          "code": "CS-3XX",
+          "title": "DS Elective-6 (Mobile App dev)",
+          "credits": "2+1"
+        }
+      ]
+    },
+    {
+      "name": "Semester 7",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "DS-498",
+          "title": "Final Year Project - I",
+          "credits": "0+2"
+        },
+        {
+          "serial": "2",
+          "code": "CS-251",
+          "title": "Design & Analysis of Algorithms",
+          "credits": "3+0"
+        },
+        {
+          "serial": "3",
+          "code": "HU-212",
+          "title": "Technical & Business Writing",
+          "credits": "3+0"
+        },
+        {
+          "serial": "4",
+          "code": "MGT-271",
+          "title": "Entrepreneurship",
+          "credits": "2+0"
+        },
+        {
+          "serial": "5",
+          "code": "CS-4XX",
+          "title": "DS Elective-7 (LLM)",
+          "credits": "2+1"
+        },
+        {
+          "serial": "6",
+          "code": "HU-107",
+          "title": "Pakistan Studies",
+          "credits": "2+0"
+        }
+      ]
+    },
+    {
+      "name": "Semester 8",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "DS-499",
+          "title": "Final Year Project - II",
+          "credits": "0+4"
+        },
+        {
+          "serial": "2",
+          "code": "SE-200",
+          "title": "Software Engineering*",
+          "credits": "3+0"
+        },
+        {
+          "serial": "3",
+          "code": "CS-2XX",
+          "title": "Civic and Community Engagement",
+          "credits": "1+1"
+        },
+        {
+          "serial": "4",
+          "code": "HU-223",
+          "title": "Professional Ethics (Any Course from General Education Requirements) *",
+          "credits": "3+0"
+        },
+        {
+          "serial": "5",
+          "code": "HU-102",
+          "title": "Psychology (Any Course from Elective Supporting)",
+          "credits": "3+0"
+        }
+      ]
+    }
+  ]
+}

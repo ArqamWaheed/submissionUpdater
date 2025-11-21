@@ -1,0 +1,155 @@
+{
+  "comparedAt": "2025-11-21T11:28:29.618Z",
+  "semesters": [
+    {
+      "name": "Semester 1",
+      "validKey": "Semester 1",
+      "diffCount": 1,
+      "diffs": [
+        {
+          "type": "code-mismatch",
+          "fetched": {
+            "serial": "5",
+            "code": "CS-117",
+            "title": "Applications of ICT",
+            "credits": "2+1"
+          },
+          "valid": {
+            "serial": "1",
+            "code": "CS-108",
+            "title": "Application of Info. & Comm. Technologies",
+            "credits": "2+1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Semester-2",
+      "validKey": "Semester 2",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "Semester-3",
+      "validKey": "Semester 3",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "Semester-4",
+      "validKey": "Semester 4",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "Semester-5",
+      "validKey": "Semester 5",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "Semester-6",
+      "validKey": "Semester 6",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "Semester-7",
+      "validKey": "Semester 7",
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "code-mismatch",
+          "fetched": {
+            "serial": "3",
+            "code": "HU-210",
+            "title": "Technical Writing",
+            "credits": "3+0"
+          },
+          "valid": {
+            "serial": "3",
+            "code": "HU-212",
+            "title": "Technical & Business Writing",
+            "credits": "3+0"
+          }
+        },
+        {
+          "type": "code-mismatch",
+          "fetched": {
+            "serial": "6",
+            "code": "CS-XXX",
+            "title": "DS Elective-VII",
+            "credits": "2+1"
+          },
+          "valid": {
+            "serial": "5",
+            "code": "CS-4XX",
+            "title": "DS Elective-7 (LLM)",
+            "credits": "2+1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Semester-8",
+      "validKey": "Semester 8",
+      "diffCount": 1,
+      "diffs": [
+        {
+          "type": "code-mismatch",
+          "fetched": {
+            "serial": "1",
+            "code": "CCE-401",
+            "title": "Civic and Community Engagement",
+            "credits": "1+1"
+          },
+          "valid": {
+            "serial": "3",
+            "code": "CS-2XX",
+            "title": "Civic and Community Engagement",
+            "credits": "1+1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "For Pre-Medical Students Only (Semester-I)",
+      "validKey": "For Pre- medical Students only (Semester-1)",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "For Pre-Medical Students Only (Semester-2)",
+      "validKey": "For Pre- medical Students only (Semester-2)",
+      "diffCount": 0,
+      "diffs": []
+    },
+    {
+      "name": "(extra in valid) For Pre- medical Students only (Summer)",
+      "validKey": "For Pre- medical Students only (Summer)",
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "1",
+            "code": "MATH-234",
+            "title": "Multivariable Calculus",
+            "credits": "3+0"
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "2",
+            "code": "MATH-222",
+            "title": "Linear Algebra",
+            "credits": "3+0"
+          }
+        }
+      ]
+    }
+  ]
+}

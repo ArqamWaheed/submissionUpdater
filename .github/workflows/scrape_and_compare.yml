@@ -1,0 +1,53 @@
+name: Weekly scrape & compare
+
+on:
+  schedule:
+    # every Sunday at 00:00 UTC (weekly)
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+jobs:
+  scrape-and-compare:
+    name: Scrape website and compare with authoritative sheet
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        # Playwright needs its browsers installed to run headless rendering fallbacks
+        run: npx playwright install --with-deps
+
+      - name: Run scraper (generate data/courses.json)
+        run: npm run scrape
+
+      - name: Run comparison
+        id: compare
+        continue-on-error: true
+        run: |
+          node tools/compare_courses.js
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-results
+          path: |
+            data/courses.json
+            data/compare_report.json
+            data/courses_from_sheet.json
+
+      - name: Fail job when differences found
+        if: ${{ steps.compare.outcome == 'failure' }}
+        run: |
+          echo "Comparison step reported differences (exit != 0). Failing workflow to highlight changes."
+          exit 1
