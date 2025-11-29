@@ -1,7 +1,7 @@
 {
-  "url": "https://seecs.nust.edu.pk/program/bachelor-of-science-in-data-science-for-fall-2025-onwards",
-  "fetchedAt": "2025-11-21T11:35:40.995Z",
-  "title": "BACHELOR OF SCIENCE IN DATA SCIENCE FOR FALL 2025 ONWARDS",
+  "url": "https://seecs.nust.edu.pk/program/bachelor-of-science-in-artificial-intelligence-for-fall-2025-on-wards",
+  "fetchedAt": "2025-11-29T09:14:06.745Z",
+  "title": "BACHELOR OF SCIENCE IN ARTIFICIAL INTELLIGENCE FOR FALL 2025-ON WARDS",
   "semesters": [
     {
       "name": "Semester 1",
@@ -32,8 +32,8 @@
         },
         {
           "serial": "5",
-          "code": "CS-117",
-          "title": "Applications of ICT",
+          "code": "CS-108",
+          "title": "Application of Information & Communication Technologies",
           "credits": "2+1"
         },
         {
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "name": "Semester-2",
+      "name": "Semester 2",
       "courses": [
         {
           "serial": "1",
@@ -120,21 +120,21 @@
         },
         {
           "serial": "4",
-          "code": "CS-250",
-          "title": "Data Structures & Algorithms",
-          "credits": "3+1"
-        },
-        {
-          "serial": "5",
           "code": "CS-272",
           "title": "Artificial Intelligence",
           "credits": "2+1"
         },
         {
-          "serial": "6",
+          "serial": "5",
           "code": "EE-347",
           "title": "Computer Networks",
           "credits": "2+1"
+        },
+        {
+          "serial": "6",
+          "code": "CS-250",
+          "title": "Data Structures & Algorithms---",
+          "credits": "3+1"
         },
         {
           "serial": "7",
@@ -149,38 +149,38 @@
       "courses": [
         {
           "serial": "1",
-          "code": "DS-401",
-          "title": "Introduction to Data Science",
-          "credits": "2+1"
-        },
-        {
-          "serial": "2",
           "code": "PHY-102",
           "title": "Applied Physics",
           "credits": "2+1"
         },
         {
-          "serial": "3",
+          "serial": "2",
           "code": "ENGL-104",
           "title": "Expository Writing",
           "credits": "3+0"
         },
         {
-          "serial": "4",
+          "serial": "3",
           "code": "CS-234",
           "title": "Computer Organization and Assembly Language",
           "credits": "2+1"
         },
         {
+          "serial": "4",
+          "code": "CS-245",
+          "title": "Machine Learning",
+          "credits": "2+1"
+        },
+        {
           "serial": "5",
-          "code": "STAT-222",
-          "title": "Advance Statistics",
+          "code": "DS-201",
+          "title": "Programming for AI",
           "credits": "2+1"
         },
         {
           "serial": "6",
           "code": "CS-3XX",
-          "title": "DS Elective-I",
+          "title": "AI Elective-1",
           "credits": "2+1"
         },
         {
@@ -208,26 +208,26 @@
         },
         {
           "serial": "3",
-          "code": "DS-311",
-          "title": "Data Mining",
+          "code": "CS-348",
+          "title": "Knowledge Representation & Reasoning",
           "credits": "2+1"
         },
         {
           "serial": "4",
-          "code": "CS-3XX",
-          "title": "DS Elective-II",
+          "code": "DS-313",
+          "title": "Artificial Neural Networks & Deep Learning",
           "credits": "2+1"
         },
         {
           "serial": "5",
           "code": "CS-3XX",
-          "title": "DS Elective-III",
+          "title": "CS Elective-II",
           "credits": "2+1"
         },
         {
           "serial": "6",
-          "code": "CS-366",
-          "title": "Data Visualization",
+          "code": "CS-3XX",
+          "title": "CS Elective-III",
           "credits": "2+1"
         },
         {
@@ -243,38 +243,38 @@
       "courses": [
         {
           "serial": "1",
+          "code": "CS-474",
+          "title": "Computer Vision",
+          "credits": "2+1"
+        },
+        {
+          "serial": "2",
           "code": "HU-127",
           "title": "Ideology and Constitution of Pakistan.",
           "credits": "2+0"
         },
         {
-          "serial": "2",
+          "serial": "3",
           "code": "CS-347",
           "title": "Parallel and Distributed Computing",
           "credits": "2+1"
         },
         {
-          "serial": "3",
-          "code": "DS-312",
-          "title": "Data Warehousing and Business Intelligence",
-          "credits": "2+1"
-        },
-        {
           "serial": "4",
           "code": "CS-3XX",
-          "title": "DS Elective-IV",
+          "title": "AI Elective-IV",
           "credits": "2+1"
         },
         {
           "serial": "5",
           "code": "CS-3XX",
-          "title": "DS Elective-V",
+          "title": "AI Elective-V",
           "credits": "2+1"
         },
         {
           "serial": "6",
           "code": "CS-3XX",
-          "title": "DS Elective-VI",
+          "title": "AI Elective-VI",
           "credits": "2+1"
         },
         {
@@ -296,15 +296,15 @@
         },
         {
           "serial": "2",
-          "code": "MGT-271",
-          "title": "Entrepreneurship",
-          "credits": "2+0"
-        },
-        {
-          "serial": "3",
           "code": "HU-210",
           "title": "Technical Writing",
           "credits": "3+0"
+        },
+        {
+          "serial": "3",
+          "code": "MGT-271",
+          "title": "Entrepreneurship",
+          "credits": "2+0"
         },
         {
           "serial": "4",
@@ -320,8 +320,8 @@
         },
         {
           "serial": "6",
-          "code": "CS-XXX",
-          "title": "DS Elective-VII",
+          "code": "CS-4XX",
+          "title": "AI Elective-VII",
           "credits": "2+1"
         },
         {
@@ -373,19 +373,19 @@
         },
         {
           "serial": "7",
-          "code": "Grand Total",
-          "title": "Total CHs",
-          "credits": "101+34=135"
+          "code": null,
+          "title": "Grand Total",
+          "credits": "102+35=137"
         }
       ]
     },
     {
-      "name": "For Pre-Medical Students Only (Semester-I)",
+      "name": "For Pre- medical Students only (Semester-1)",
       "courses": [
         {
           "serial": "1",
           "code": "MATH-162",
-          "title": "Pre-Mathematics I (in lieu of MATH-161)",
+          "title": "Pre-Mathematics-I",
           "credits": "3+0"
         },
         {
@@ -397,7 +397,7 @@
       ]
     },
     {
-      "name": "For Pre-Medical Students Only (Semester-2)",
+      "name": "For Pre- medical Students only (Semester-2)",
       "courses": [
         {
           "serial": "1",

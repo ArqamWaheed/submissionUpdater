@@ -1,39 +1,17 @@
 {
-  "comparedAt": "2025-11-29T09:12:06.442Z",
+  "comparedAt": "2025-11-29T09:14:18.119Z",
   "semesters": [
     {
-      "name": "Semester-1",
+      "name": "Semester 1",
       "validKey": "Semester 1",
-      "diffCount": 1,
-      "diffs": [
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "6",
-            "code": "HU-131",
-            "title": "Understanding of Holy Quran - I / Fehm-e-Quran - I",
-            "credits": "0+1"
-          }
-        }
-      ]
+      "diffCount": 0,
+      "diffs": []
     },
     {
-      "name": "Semester-2",
+      "name": "Semester 2",
       "validKey": "Semester 2",
-      "diffCount": 1,
-      "diffs": [
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "6",
-            "code": "HU-132",
-            "title": "Understanding of Holy Quran - II / Fehm-e-Quran - II",
-            "credits": "0+1"
-          }
-        }
-      ]
+      "diffCount": 0,
+      "diffs": []
     },
     {
       "name": "Semester-3",
@@ -104,29 +82,8 @@
     {
       "name": "Semester-6",
       "validKey": "Semester 6",
-      "diffCount": 2,
-      "diffs": [
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "3",
-            "code": "HU-127",
-            "title": "Ideology and Constitution of Pakistan",
-            "credits": "2+0"
-          }
-        },
-        {
-          "type": "extra-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "2",
-            "code": "SE-200",
-            "title": "Software Engineering",
-            "credits": "3+0"
-          }
-        }
-      ]
+      "diffCount": 0,
+      "diffs": []
     },
     {
       "name": "Semester-7",
@@ -164,9 +121,14 @@
           }
         },
         {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
+          "type": "code-mismatch",
+          "fetched": {
+            "serial": "5",
+            "code": "HU-107",
+            "title": "Pakistan Studies",
+            "credits": "2+0"
+          },
+          "valid": {
             "serial": "6",
             "code": "HU 107",
             "title": "Pakistan Studies",
@@ -178,12 +140,12 @@
     {
       "name": "Semester-8",
       "validKey": "Semester 8",
-      "diffCount": 6,
+      "diffCount": 2,
       "diffs": [
         {
           "type": "code-mismatch",
           "fetched": {
-            "serial": "5",
+            "serial": "4",
             "code": "DS-499",
             "title": "Final Year Project-II",
             "credits": "0+4"
@@ -209,102 +171,20 @@
             "title": "Civic and Community Engagement",
             "credits": "1+1"
           }
-        },
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "2",
-            "code": "SE-200",
-            "title": "Software Engineering*",
-            "credits": "3+0"
-          }
-        },
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "4",
-            "code": "HU-223",
-            "title": "Professional Ethics (Any Course from General Education Requirements)",
-            "credits": "3+0"
-          }
-        },
-        {
-          "type": "extra-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "3",
-            "code": "HU-127",
-            "title": "Ideology and Constitution of Pakistan.",
-            "credits": "2+0"
-          }
-        },
-        {
-          "type": "extra-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "4",
-            "code": "HU-222",
-            "title": "Professional Ethics",
-            "credits": "2+0"
-          }
         }
       ]
     },
     {
-      "name": "(extra in valid) For Pre- medical Students only (Semester-1)",
+      "name": "For Pre- medical Students only (Semester-1)",
       "validKey": "For Pre- medical Students only (Semester-1)",
-      "diffCount": 2,
-      "diffs": [
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "3.b",
-            "code": "MATH-162",
-            "title": "Pre-Mathematics-1 (in place of MATH-161)",
-            "credits": "3+0"
-          }
-        },
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "4.b",
-            "code": "MATH-163",
-            "title": "Pre-Mathematics-2 (in place of MATH-101)",
-            "credits": "3+0"
-          }
-        }
-      ]
+      "diffCount": 0,
+      "diffs": []
     },
     {
-      "name": "(extra in valid) For Pre- medical Students only (Semester-2)",
+      "name": "For Pre- medical Students only (Semester-2)",
       "validKey": "For Pre- medical Students only (Semester-2)",
-      "diffCount": 2,
-      "diffs": [
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "4.b",
-            "code": "MATH-161",
-            "title": "Discrete Mathematics (in place of MATH-234)",
-            "credits": "3+0"
-          }
-        },
-        {
-          "type": "missing-in-fetched",
-          "count": 1,
-          "course": {
-            "serial": "5.b",
-            "code": "MATH-101",
-            "title": "Calculus & Analytical Geometry (in place of MATH-222",
-            "credits": "3+0"
-          }
-        }
-      ]
+      "diffCount": 0,
+      "diffs": []
     },
     {
       "name": "(extra in valid) For Pre- medical Students only",

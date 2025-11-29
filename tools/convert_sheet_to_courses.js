@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 const inFile = path.resolve('data', '(09222025)_BSDS_BSAI_curriculum_for_website (2025 onwards).json');
-const outFile = path.resolve('data', 'courses_from_sheet.json');
+const outFile = path.resolve('data', 'courses_from_sheet_AI.json');
 
 function makeCredits(teaching, labs) {
   if ((teaching === undefined || teaching === null || teaching === '') && (labs === undefined || labs === null || labs === '')) return null;

@@ -16,7 +16,7 @@ if (typeof File === 'undefined') {
 }
 
 // Target page to scrape
-const url = 'https://seecs.nust.edu.pk/program/bachelor-of-science-in-data-science-for-fall-2025-onwards';
+const url = 'https://seecs.nust.edu.pk/program/bachelor-of-science-in-artificial-intelligence-for-fall-2025-on-wards';
 // Helper: detect course code and credits
 const codeRegex = /[A-Z]{2,}\s*-?\s*\d{2,4}/;
 const creditsRegex = /(?:\b|\()([0-9]+(?:\.[0-9]+)?)(?:\s*Cr|\s*credit|\)|$)/i;
@@ -71,6 +71,8 @@ function parseCourseFromLine(line) {
 function extractSemesters($) {
   const semesterHeadings = $('h1,h2,h3,h4,h5,h6').toArray().filter(h => /semester/i.test($(h).text()));
   const semesters = [];
+  
+  // Try method 1: explicit semester headings
   for (const h of semesterHeadings) {
     const semName = $(h).text().trim();
     const courses = [];
@@ -112,17 +114,15 @@ function extractSemesters($) {
     }
     semesters.push({ name: semName, courses: deduped });
   }
-  // Additionally, some pages use tables with a thead <th> that contains the semester name.
-  // Find those tables and extract courses from their tbody.
+  
+  // Method 2: tables with thead semester names
   $('table').each((_, table) => {
     const headTh = $(table).find('thead tr th').first();
     const headText = headTh.text().trim();
     if (!/semester/i.test(headText)) return;
-    // Avoid duplicating if this semester name already captured
     if (semesters.some(s => s.name === headText)) return;
     const courses = [];
     $(table).find('tbody tr').each((__, tr) => {
-      // collect th (serial) and td cells
       const serial = $(tr).find('th[scope="row"]').first().text().trim();
       const tds = $(tr).find('td').toArray().map(td => $(td).text().trim());
       const cells = [];
@@ -141,6 +141,49 @@ function extractSemesters($) {
     }
     semesters.push({ name: headText, courses: deduped });
   });
+  
+  // Method 3: pages without explicit semester headers - extract all tables and number them
+  if (semesters.length === 0) {
+    let semesterIndex = 1;
+    $('table').each((_, table) => {
+      const courses = [];
+      let hasTotal = false;
+      
+      $(table).find('tr').each((__, tr) => {
+        const cols = $(tr).find('th,td').toArray().map(td => $(td).text().trim());
+        
+        // Skip empty rows
+        if (cols.filter(Boolean).length === 0) return;
+        
+        // Check if this is a Total row
+        const rowText = cols.join(' ').toLowerCase();
+        if (rowText.includes('total') || rowText.includes('grand total')) {
+          hasTotal = true;
+          return; // skip the total row itself
+        }
+        
+        // Try to parse as course
+        const parsed = parseCourseFromCells(cols);
+        // Filter out rows without a valid course code (skip total rows and other non-course entries)
+        if ((parsed.code || parsed.title) && !rowText.includes('total')) {
+          courses.push(parsed);
+        }
+      });
+      
+      // Only add if we found courses and it looks like a semester table (has Total row)
+      if (courses.length > 0 && hasTotal) {
+        const seen = new Set();
+        const deduped = [];
+        for (const c of courses) {
+          const key = `${c.code||''}||${c.title||''}`;
+          if (!seen.has(key)) { seen.add(key); deduped.push(c); }
+        }
+        semesters.push({ name: `Semester-${semesterIndex}`, courses: deduped });
+        semesterIndex++;
+      }
+    });
+  }
+  
   return semesters;
 }
 
@@ -201,51 +244,8 @@ async function scrapeWithFallback() {
 
     const $2 = cheerio.load(content);
 
-    // Reuse parsing logic by creating a small adapter: find semester headings and parse same as above
-    const semesterHeadings2 = $2('h1,h2,h3,h4,h5,h6').toArray().filter(h => /semester/i.test($2(h).text()));
-    const semesters2 = [];
-    for (const h of semesterHeadings2) {
-      const semName = $2(h).text().trim();
-      const courses = [];
-      let sib = $2(h).next();
-      while (sib && sib.length) {
-        const tag = sib[0].tagName ? sib[0].tagName.toLowerCase() : null;
-        if (tag && /^h[1-6]$/.test(tag) && /semester/i.test(sib.text())) break;
-        if (tag === 'table') {
-          $2(sib).find('tr').each((_, tr) => {
-            const cols = $2(tr).find('th,td').toArray().map(td => $2(td).text().trim()).filter(Boolean);
-            if (cols.length >= 2) {
-              const parsed = parseCourseFromCells(cols);
-              if (parsed.code || parsed.title) courses.push(parsed);
-            }
-          });
-        }
-        if (tag === 'ul' || tag === 'ol') {
-          $2(sib).find('li').each((_, li) => {
-            const text = $2(li).text().trim();
-            const parsed = parseCourseFromLine(text);
-            if (parsed.code || parsed.title) courses.push(parsed);
-          });
-        }
-        if (tag === 'p' || tag === 'div') {
-          const lines = $2(sib).text().split(/\n|\r/).map(l => l.trim()).filter(Boolean);
-          for (const line of lines) {
-            if (!/\d+/.test(line) && !codeRegex.test(line)) continue;
-            const parsed = parseCourseFromLine(line);
-            if (parsed.code || parsed.title) courses.push(parsed);
-          }
-        }
-        sib = sib.next();
-      }
-
-      const seen = new Set();
-      const deduped = [];
-      for (const c of courses) {
-        const key = `${c.code||''}||${c.title||''}`;
-        if (!seen.has(key)) { seen.add(key); deduped.push(c); }
-      }
-      semesters2.push({ name: semName, courses: deduped });
-    }
+    // Reuse extraction logic
+    const semesters2 = extractSemesters($2);
 
     const result2 = {
       url,
