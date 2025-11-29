@@ -63,6 +63,7 @@ async function run() {
     const titleText = row['__EMPTY_2'];
     const teaching = row['__EMPTY_3'];
     const labs = row['__EMPTY_4'];
+    const prereq = row['__EMPTY_5'];
 
     // Skip rows without code or title
     if (!code && !titleText) continue;
@@ -92,6 +93,7 @@ async function run() {
       code: code ? String(code).trim() : null,
       title: titleText ? String(titleText).trim() : null,
       credits,
+      prerequisite: prereq ? String(prereq).trim() : null,
     });
   }
 

@@ -16,26 +16,29 @@ if (typeof File === 'undefined') {
 }
 
 // Target page to scrape
-const url = 'https://seecs.nust.edu.pk/program/bachelor-of-science-in-artificial-intelligence-for-fall-2025-on-wards';
+const url = 'https://seecs.nust.edu.pk/program/bachelor-of-science-in-data-science-for-fall--2023-fall---2024-entiers';
 // Helper: detect course code and credits
 const codeRegex = /[A-Z]{2,}\s*-?\s*\d{2,4}/;
 const creditsRegex = /(?:\b|\()([0-9]+(?:\.[0-9]+)?)(?:\s*Cr|\s*credit|\)|$)/i;
 
 function parseCourseFromCells(cells) {
-  let serial = null; let code = null; let credits = null; let title = '';
-  // If the row looks like a table row (No, Code, Title, Credit Hours, ...)
-  // then prefer positional parsing for accuracy.
+  let serial = null; let code = null; let credits = null; let prerequisite = null; let title = '';
+  // Table structure: No | Code | Title | Credit Hours | Related SDGs | Pre-requisites | (empty column)
   const first = cells[0] || '';
   const hasSerial = /^\d+$/.test(first);
   const offset = hasSerial ? 1 : 0;
   if (cells.length >= offset + 3) {
-    // code is at offset, title at offset+1, credits at offset+2 (if table structure)
     if (hasSerial) serial = first.trim();
     code = (cells[offset] || '').trim() || null;
     title = (cells[offset + 1] || '').trim() || null;
     const creditCell = (cells[offset + 2] || '').trim();
     credits = creditCell || null; // keep as string like '3+1' when available
-    return { serial, code, title, credits };
+    // Prerequisite is at column 5 (cells[5] when hasSerial, which is offset+4)
+    if (cells.length >= offset + 5) {
+      const prereqCell = (cells[offset + 4] || '').trim();
+      prerequisite = prereqCell || null;
+    }
+    return { serial, code, title, credits, prerequisite };
   }
 
   // Fallback: try to extract by scanning pieces
@@ -50,12 +53,12 @@ function parseCourseFromCells(cells) {
     remaining.push(t);
   }
   title = remaining.join(' - ').trim();
-  return { serial, code, title: title || null, credits: credits ? Number(credits) : null };
+  return { serial, code, title: title || null, credits: credits ? Number(credits) : null, prerequisite };
 }
 
 function parseCourseFromLine(line) {
   const s = line.trim();
-  let serial = null, code = null, credits = null, title = null;
+  let serial = null, code = null, credits = null, prerequisite = null, title = null;
   const serialMatch = s.match(/^\s*(\d+)\s*[.)-]?\s*/);
   let rest = s;
   if (serialMatch) { serial = serialMatch[1]; rest = s.slice(serialMatch[0].length); }
@@ -65,7 +68,7 @@ function parseCourseFromLine(line) {
   if (creditsMatch) { credits = Number(creditsMatch[1]); rest = rest.replace(creditsMatch[0], ''); }
   title = rest.replace(/[-–—]+/g, ' ').replace(/\s{2,}/g, ' ').trim();
   if (!title) title = null;
-  return { serial, code, title, credits };
+  return { serial, code, title, credits, prerequisite };
 }
 
 function extractSemesters($) {

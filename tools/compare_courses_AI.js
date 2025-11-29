@@ -81,7 +81,15 @@ function compareSemesters(fetchedSem, validSemMerged) {
   const fetchedCourses = fetchedSem.courses || []
   const validCourses = validSemMerged.courses || []
 
-  const fingerprint = c => `${normalizeCode(c.code)}|${normalizeCredits(c.credits)}`
+  const fingerprint = c => `${normalizeCode(c.code)}|${normalizeCredits(c.credits)}|${normalizePrereq(c.prerequisite)}`
+
+  function normalizePrereq(p) {
+    if (!p) return ''
+    const s = String(p).trim().toUpperCase()
+    const codePattern = /[A-Z]{2,}[-\s]?\d{2,4}/g
+    const codes = s.match(codePattern) || []
+    return codes.map(c => c.replace(/\s+/g, '-')).sort().join('|')
+  }
 
   function isTotalCourse(c) {
     if (!c) return false
@@ -142,7 +150,7 @@ function compareSemesters(fetchedSem, validSemMerged) {
   }
   const acronym = s => (words(s).map(w => w[0]).join('') || '').toUpperCase()
 
-  // Try to pair missing vs extra as code-mismatch
+  // Try to pair missing vs extra as code-mismatch or prerequisite-mismatch
   const pairedMissing = new Set()
   const pairedExtra = new Set()
   for (let i = 0; i < missingList.length; i++) {
@@ -153,6 +161,17 @@ function compareSemesters(fetchedSem, validSemMerged) {
       const e = extraList[j]
       const eCourse = e.entry.sample
       if (normalizeCredits(mCourse.credits) !== normalizeCredits(eCourse.credits)) continue
+      
+      // Check if codes match but prerequisites differ
+      if (normalizeCode(mCourse.code) === normalizeCode(eCourse.code)) {
+        if (normalizePrereq(mCourse.prerequisite) !== normalizePrereq(eCourse.prerequisite)) {
+          diffs.push({ type: 'prerequisite-mismatch', fetched: eCourse, valid: mCourse })
+          pairedMissing.add(i)
+          pairedExtra.add(j)
+          break
+        }
+      }
+      
       const sim = jaccard(mCourse.title, eCourse.title)
       const acrM = acronym(mCourse.title)
       const acrE = acronym(eCourse.title)
@@ -208,6 +227,13 @@ async function sendEmailReport(report) {
         const f = d.fetched || {}
         const v = d.valid || {}
         lines.push(`CODE MISMATCH: website='${f.code||''}' vs sheet='${v.code||''}' credits='${normalizeCredits(f.credits)||normalizeCredits(v.credits)}'`) 
+        continue
+      }
+      if (d.type === 'prerequisite-mismatch') {
+        const f = d.fetched || {}
+        const v = d.valid || {}
+        const code = f.code || v.code || '(no code)'
+        lines.push(`PREREQUISITE MISMATCH: ${code} - website='${f.prerequisite||'(none)'}' vs sheet='${v.prerequisite||'(none)'}'`)
         continue
       }
       if (d.type === 'extra-in-fetched') {
@@ -291,6 +317,13 @@ async function sendViaSmtpIfConfigured(report) {
           const f = d.fetched || {}
           const v = d.valid || {}
           lines.push(`CODE MISMATCH: website='${f.code||''}' vs sheet='${v.code||''}' credits='${normalizeCredits(f.credits)||normalizeCredits(v.credits)}'`) 
+          continue
+        }
+        if (d.type === 'prerequisite-mismatch') {
+          const f = d.fetched || {}
+          const v = d.valid || {}
+          const code = f.code || v.code || '(no code)'
+          lines.push(`PREREQUISITE MISMATCH: ${code} - website='${f.prerequisite||'(none)'}' vs sheet='${v.prerequisite||'(none)'}'`)
           continue
         }
         if (d.type === 'extra-in-fetched') {
@@ -408,6 +441,7 @@ async function main() {
     
     // Group differences by type
     const codeMismatches = []
+    const prereqMismatches = []
     const missing = []
     const extra = []
     const countMismatches = []
@@ -415,6 +449,8 @@ async function main() {
     for (const d of sem.diffs) {
       if (d.type === 'code-mismatch') {
         codeMismatches.push(d)
+      } else if (d.type === 'prerequisite-mismatch') {
+        prereqMismatches.push(d)
       } else if (d.type === 'missing-in-fetched') {
         missing.push(d)
       } else if (d.type === 'extra-in-fetched') {
@@ -431,6 +467,19 @@ async function main() {
         const f = d.fetched || {}
         const v = d.valid || {}
         console.log(`  ${f.code || '(none)'} (website) → should be ${v.code || '(none)'}`)
+      }
+    }
+    
+    // Print prerequisite mismatches
+    if (prereqMismatches.length > 0) {
+      console.log('\nPrerequisite mismatches:')
+      for (const d of prereqMismatches) {
+        const f = d.fetched || {}
+        const v = d.valid || {}
+        const code = f.code || v.code || '(no code)'
+        const fPrereq = f.prerequisite || '(none)'
+        const vPrereq = v.prerequisite || '(none)'
+        console.log(`  ${code} – website='${fPrereq}' vs sheet='${vPrereq}'`)
       }
     }
     

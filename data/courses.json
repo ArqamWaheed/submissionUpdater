@@ -1,99 +1,99 @@
 {
-  "url": "https://seecs.nust.edu.pk/program/bachelor-of-science-in-artificial-intelligence-for-fall-2025-on-wards",
-  "fetchedAt": "2025-11-29T09:14:06.745Z",
-  "title": "BACHELOR OF SCIENCE IN ARTIFICIAL INTELLIGENCE FOR FALL 2025-ON WARDS",
+  "url": "https://seecs.nust.edu.pk/program/bachelor-of-science-in-data-science-for-fall--2023-fall---2024-entiers",
+  "fetchedAt": "2025-11-29T12:08:25.753Z",
+  "title": "BACHELOR OF SCIENCE IN DATA SCIENCE FOR FALL- 2023 & FALL - 2024 ENTIERS",
   "semesters": [
     {
-      "name": "Semester 1",
+      "name": "Semester-1",
       "courses": [
         {
           "serial": "1",
           "code": "CS-110",
           "title": "Fundamentals of Computer Programming",
-          "credits": "3+1"
+          "credits": "3+1",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "MATH-101",
           "title": "Calculus & Analytical Geometry",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "3",
           "code": "MATH-161",
           "title": "Discrete Mathematics",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "4",
           "code": "HU-114",
           "title": "Functional English",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "5",
           "code": "CS-108",
           "title": "Application of Information & Communication Technologies",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
-          "code": "HU-131",
-          "title": "Understanding of Quran-I",
-          "credits": "0+1"
-        },
-        {
-          "serial": "7",
-          "code": "Total",
+          "code": null,
           "title": "Total CHs",
-          "credits": "14+3+17"
+          "credits": "14+2",
+          "prerequisite": null
         }
       ]
     },
     {
-      "name": "Semester 2",
+      "name": "Semester-2",
       "courses": [
         {
           "serial": "1",
           "code": "CS-220",
           "title": "Database Systems",
-          "credits": "3+1"
+          "credits": "3+1",
+          "prerequisite": null
         },
         {
           "serial": "2",
-          "code": "MATH-222",
-          "title": "Linear Algebra",
-          "credits": "3+0"
+          "code": "CS-212",
+          "title": "Object Oriented Programming",
+          "credits": "3+1",
+          "prerequisite": "CS-114 Fundamental of Programming"
         },
         {
           "serial": "3",
-          "code": "MATH-234",
-          "title": "Multivariable Calculus",
-          "credits": "3+0"
+          "code": "MATH-222",
+          "title": "Linear Algebra",
+          "credits": "3+0",
+          "prerequisite": "MATH-101"
         },
         {
           "serial": "4",
-          "code": "CS-212",
-          "title": "Object Oriented Programming (OOP)",
-          "credits": "3+1"
+          "code": "MATH-234",
+          "title": "Multivariable Calculus",
+          "credits": "3+0",
+          "prerequisite": "MATH-101"
         },
         {
           "serial": "5",
           "code": "EE-223",
           "title": "Digital Logic Design",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
-          "code": "HU-132",
-          "title": "Understanding of Quran-II",
-          "credits": "0+1"
-        },
-        {
-          "serial": "7",
-          "code": "Total",
+          "code": null,
           "title": "Total CHs",
-          "credits": "14+4=18"
+          "credits": "14+3",
+          "prerequisite": null
         }
       ]
     },
@@ -104,43 +104,50 @@
           "serial": "1",
           "code": "MATH-361",
           "title": "Probability & Statistics",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "CS-353",
           "title": "Information Security",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "3",
           "code": "HU-101",
           "title": "Islamic Studies",
-          "credits": "2+0"
+          "credits": "2+0",
+          "prerequisite": null
         },
         {
           "serial": "4",
           "code": "CS-272",
           "title": "Artificial Intelligence",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "5",
           "code": "EE-347",
           "title": "Computer Networks",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
           "code": "CS-250",
-          "title": "Data Structures & Algorithms---",
-          "credits": "3+1"
+          "title": "Data Structures & Algorithms",
+          "credits": "3+1",
+          "prerequisite": "CS-212 Object-Oriented Programming"
         },
         {
           "serial": "7",
-          "code": "Total",
-          "title": "Total CHs",
-          "credits": "14+4=18"
+          "code": null,
+          "title": "Total Chs",
+          "credits": "14+4",
+          "prerequisite": null
         }
       ]
     },
@@ -149,45 +156,52 @@
       "courses": [
         {
           "serial": "1",
-          "code": "PHY-102",
-          "title": "Applied Physics",
-          "credits": "2+1"
+          "code": "DS-401",
+          "title": "Introduction to Data Science",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "2",
-          "code": "ENGL-104",
-          "title": "Expository Writing",
-          "credits": "3+0"
+          "code": "PHY-102",
+          "title": "Applied Physics",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "3",
-          "code": "CS-234",
-          "title": "Computer Organization and Assembly Language",
-          "credits": "2+1"
+          "code": "ENGL-104",
+          "title": "Expository Writing",
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "4",
-          "code": "CS-245",
-          "title": "Machine Learning",
-          "credits": "2+1"
+          "code": "CS-234",
+          "title": "Computer Organization and Assembly Language",
+          "credits": "2+1",
+          "prerequisite": "EE-223"
         },
         {
           "serial": "5",
-          "code": "DS-201",
-          "title": "Programming for AI",
-          "credits": "2+1"
+          "code": "STAT-222",
+          "title": "Advance Statistics",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
           "code": "CS-3XX",
-          "title": "AI Elective-1",
-          "credits": "2+1"
+          "title": "DS Elective-I",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "7",
-          "code": "Total",
+          "code": null,
           "title": "Total CHs",
-          "credits": "13+5=18"
+          "credits": "13+5",
+          "prerequisite": null
         }
       ]
     },
@@ -198,43 +212,50 @@
           "serial": "1",
           "code": "MGT-164",
           "title": "Introduction To Management",
-          "credits": "2+0"
+          "credits": "2+0",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "CS-333",
           "title": "Operating Systems",
-          "credits": "2+1"
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "3",
-          "code": "CS-348",
-          "title": "Knowledge Representation & Reasoning",
-          "credits": "2+1"
+          "code": "DS-311",
+          "title": "Data Mining",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "4",
-          "code": "DS-313",
-          "title": "Artificial Neural Networks & Deep Learning",
-          "credits": "2+1"
+          "code": "CS-3XX",
+          "title": "DS Elective-II",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "5",
           "code": "CS-3XX",
-          "title": "CS Elective-II",
-          "credits": "2+1"
+          "title": "DS Elective-III",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
-          "code": "CS-3XX",
-          "title": "CS Elective-III",
-          "credits": "2+1"
+          "code": "CS-366",
+          "title": "Data Visualization",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "7",
-          "code": "Total",
+          "code": null,
           "title": "Total CHs",
-          "credits": "12+5=17"
+          "credits": "12+5",
+          "prerequisite": null
         }
       ]
     },
@@ -243,45 +264,52 @@
       "courses": [
         {
           "serial": "1",
-          "code": "CS-474",
-          "title": "Computer Vision",
-          "credits": "2+1"
+          "code": "SE-200",
+          "title": "Software Engineering",
+          "credits": "3+0",
+          "prerequisite": "CS-212 Object Oriented Programming"
         },
         {
           "serial": "2",
-          "code": "HU-127",
-          "title": "Ideology and Constitution of Pakistan.",
-          "credits": "2+0"
+          "code": "CS-347",
+          "title": "Parallel and Distributed Computing",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "3",
-          "code": "CS-347",
-          "title": "Parallel and Distributed Computing",
-          "credits": "2+1"
+          "code": "DS-312",
+          "title": "Data Warehousing and Business Intelligence",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "4",
           "code": "CS-3XX",
-          "title": "AI Elective-IV",
-          "credits": "2+1"
+          "title": "DS Elective-IV",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "5",
           "code": "CS-3XX",
-          "title": "AI Elective-V",
-          "credits": "2+1"
+          "title": "DS Elective-V",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
           "code": "CS-3XX",
-          "title": "AI Elective-VI",
-          "credits": "2+1"
+          "title": "DS Elective-VI",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "7",
-          "code": "Total",
-          "title": "Total CHs",
-          "credits": "12+5=17"
+          "code": null,
+          "title": "CHs",
+          "credits": "13+5",
+          "prerequisite": null
         }
       ]
     },
@@ -292,43 +320,43 @@
           "serial": "1",
           "code": "CS-251",
           "title": "Design & Analysis of Algorithms",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": "CS-250"
         },
         {
           "serial": "2",
           "code": "HU-210",
           "title": "Technical Writing",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "3",
           "code": "MGT-271",
           "title": "Entrepreneurship",
-          "credits": "2+0"
+          "credits": "2+0",
+          "prerequisite": null
         },
         {
           "serial": "4",
           "code": "DS-498",
           "title": "Final Year Project-1",
-          "credits": "0+2"
+          "credits": "0+2",
+          "prerequisite": null
         },
         {
           "serial": "5",
-          "code": "HU-107",
-          "title": "Pakistan Studies",
-          "credits": "2+0"
+          "code": "CS-XXX",
+          "title": "DS Elective-VII",
+          "credits": "2+1",
+          "prerequisite": null
         },
         {
           "serial": "6",
-          "code": "CS-4XX",
-          "title": "AI Elective-VII",
-          "credits": "2+1"
-        },
-        {
-          "serial": "7",
-          "code": "Total",
+          "code": null,
           "title": "Total CHs",
-          "credits": "12+3=15"
+          "credits": "10+3",
+          "prerequisite": null
         }
       ]
     },
@@ -339,77 +367,100 @@
           "serial": "1",
           "code": "CCE-401",
           "title": "Civic and Community Engagement",
-          "credits": "1+1"
+          "credits": "1+1",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "HU-102",
           "title": "Psychology",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "3",
-          "code": "HU-223",
-          "title": "Professional Ethics",
-          "credits": "3+0"
+          "code": "HU-127",
+          "title": "Ideology and Constitution of Pakistan.",
+          "credits": "2+0",
+          "prerequisite": null
         },
         {
           "serial": "4",
-          "code": "DS-499",
-          "title": "Final Year Project-II",
-          "credits": "0+4"
+          "code": "HU-222",
+          "title": "Professional Ethics",
+          "credits": "2+0",
+          "prerequisite": null
         },
         {
           "serial": "5",
-          "code": "SE-200",
-          "title": "Software Engineering",
-          "credits": "3+0"
+          "code": "DS-499",
+          "title": "Final Year Project-II",
+          "credits": "0+4",
+          "prerequisite": "DS-498"
         },
         {
           "serial": "6",
-          "code": "Total",
-          "title": "Total CHs",
-          "credits": "10+5=15"
-        },
-        {
-          "serial": "7",
           "code": null,
-          "title": "Grand Total",
-          "credits": "102+35=137"
+          "title": "Total CHs",
+          "credits": "8+5",
+          "prerequisite": null
         }
       ]
     },
     {
-      "name": "For Pre- medical Students only (Semester-1)",
+      "name": "For Pre-Medical Students Only (Semester-1)",
       "courses": [
         {
           "serial": "1",
           "code": "MATH-162",
-          "title": "Pre-Mathematics-I",
-          "credits": "3+0"
+          "title": "Pre-Mathematics I (in lieu of MATH-161)",
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "MATH-163",
           "title": "Pre-Mathematics-II",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         }
       ]
     },
     {
-      "name": "For Pre- medical Students only (Semester-2)",
+      "name": "For Pre-Medical Students Only (Semester-2)",
       "courses": [
         {
           "serial": "1",
           "code": "MATH-101",
           "title": "Calculus & Analytical Geometry",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
         },
         {
           "serial": "2",
           "code": "MATH-161",
           "title": "Discrete Mathematics",
-          "credits": "3+0"
+          "credits": "3+0",
+          "prerequisite": null
+        }
+      ]
+    },
+    {
+      "name": "For Pre-medical Students only (Summer Semester)",
+      "courses": [
+        {
+          "serial": "1",
+          "code": "MATH-222",
+          "title": "Linear Algebra",
+          "credits": "3+0",
+          "prerequisite": "MATH-101"
+        },
+        {
+          "serial": "2",
+          "code": "MATH-234",
+          "title": "Multivariable Calculus",
+          "credits": "3+0",
+          "prerequisite": "MATH-101"
         }
       ]
     }

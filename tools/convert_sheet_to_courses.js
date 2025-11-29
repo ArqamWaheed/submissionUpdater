@@ -1,8 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const inFile = path.resolve('data', '(09222025)_BSDS_BSAI_curriculum_for_website (2025 onwards).json');
-const outFile = path.resolve('data', 'courses_from_sheet_AI.json');
+const inFile = path.resolve('data', 'DSCurriculum.json');
+const outFile = path.resolve('data', 'courses_from_sheet.json');
 
 function makeCredits(teaching, labs) {
   if ((teaching === undefined || teaching === null || teaching === '') && (labs === undefined || labs === null || labs === '')) return null;
@@ -50,6 +50,7 @@ async function run() {
     const titleText = row['__EMPTY_1'] ?? null;
     const teaching = row['__EMPTY_2'];
     const labs = row['__EMPTY_3'];
+    const prereq = row['__EMPTY_4'] ?? null;
 
     if (!code && !titleText) continue;
 
@@ -70,6 +71,7 @@ async function run() {
       code: code ? String(code).trim() : null,
       title: titleText ? String(titleText).trim() : null,
       credits,
+      prerequisite: prereq ? String(prereq).trim() : null,
     });
   }
 

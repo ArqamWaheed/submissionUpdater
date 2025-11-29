@@ -1,28 +1,87 @@
 {
-  "comparedAt": "2025-11-29T09:14:18.119Z",
+  "comparedAt": "2025-11-29T11:54:45.295Z",
   "semesters": [
     {
-      "name": "Semester 1",
+      "name": "Semester-1",
       "validKey": "Semester 1",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 1,
+      "diffs": [
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "6",
+            "code": "HU-131",
+            "title": "Understanding of Holy Quran - I / Fehm-e-Quran - I",
+            "credits": "0+1",
+            "prerequisite": null
+          }
+        }
+      ]
     },
     {
-      "name": "Semester 2",
+      "name": "Semester-2",
       "validKey": "Semester 2",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "prerequisite-mismatch",
+          "fetched": {
+            "serial": "2",
+            "code": "CS-212",
+            "title": "Object Oriented Programming",
+            "credits": "3+1",
+            "prerequisite": "CS-114 Fundamental of Programming"
+          },
+          "valid": {
+            "serial": "1",
+            "code": "CS-212",
+            "title": "Object Oriented Programming (OOP)",
+            "credits": "3+1",
+            "prerequisite": "CS-110, FOCP"
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "6",
+            "code": "HU-132",
+            "title": "Understanding of Holy Quran - II / Fehm-e-Quran - II",
+            "credits": "0+1",
+            "prerequisite": "HU-XXX-I"
+          }
+        }
+      ]
     },
     {
       "name": "Semester-3",
       "validKey": "Semester 3",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 1,
+      "diffs": [
+        {
+          "type": "prerequisite-mismatch",
+          "fetched": {
+            "serial": "6",
+            "code": "CS-250",
+            "title": "Data Structures & Algorithms---",
+            "credits": "3+1",
+            "prerequisite": "CS-212 Object-Oriented Programming"
+          },
+          "valid": {
+            "serial": "1",
+            "code": "CS-250",
+            "title": "Data Structures & Algorithms (DSA)",
+            "credits": "3+1",
+            "prerequisite": "CS-110, FoCP"
+          }
+        }
+      ]
     },
     {
       "name": "Semester-4",
       "validKey": "Semester 4",
-      "diffCount": 1,
+      "diffCount": 2,
       "diffs": [
         {
           "type": "code-mismatch",
@@ -30,13 +89,32 @@
             "serial": "5",
             "code": "DS-201",
             "title": "Programming for AI",
-            "credits": "2+1"
+            "credits": "2+1",
+            "prerequisite": null
           },
           "valid": {
             "serial": "2",
             "code": "CS-2XX",
             "title": "Programming for AI (Domain Core 1)",
-            "credits": "2+1"
+            "credits": "2+1",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "prerequisite-mismatch",
+          "fetched": {
+            "serial": "2",
+            "code": "ENGL-104",
+            "title": "Expository Writing",
+            "credits": "3+0",
+            "prerequisite": null
+          },
+          "valid": {
+            "serial": "5",
+            "code": "ENGL-104",
+            "title": "Expository Writing",
+            "credits": "3+0",
+            "prerequisite": "HU-114, Functional English"
           }
         }
       ]
@@ -53,7 +131,8 @@
             "serial": "3",
             "code": "CS-348",
             "title": "Knowledge Representation & Reasoning",
-            "credits": "2+1"
+            "credits": "2+1",
+            "prerequisite": null
           }
         },
         {
@@ -63,7 +142,8 @@
             "serial": "4",
             "code": "DS-313",
             "title": "Artificial Neural Networks & Deep Learning",
-            "credits": "2+1"
+            "credits": "2+1",
+            "prerequisite": null
           }
         },
         {
@@ -72,7 +152,8 @@
             "serial": "2",
             "code": "CS-3XX",
             "title": "Artificial Neural Networks & Deep Learning (Domain Core 3)",
-            "credits": "2+1"
+            "credits": "2+1",
+            "prerequisite": null
           },
           "fetchedCount": 2,
           "validCount": 4
@@ -82,8 +163,31 @@
     {
       "name": "Semester-6",
       "validKey": "Semester 6",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "3",
+            "code": "HU-127",
+            "title": "Ideology and Constitution of Pakistan",
+            "credits": "2+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "extra-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "2",
+            "code": "SE-200",
+            "title": "Software Engineering",
+            "credits": "3+0",
+            "prerequisite": "CS-212 Object Oriented Programming"
+          }
+        }
+      ]
     },
     {
       "name": "Semester-7",
@@ -96,13 +200,15 @@
             "serial": "4",
             "code": "DS-498",
             "title": "Final Year Project-1",
-            "credits": "0+2"
+            "credits": "0+2",
+            "prerequisite": null
           },
           "valid": {
             "serial": "1",
             "code": "AI-498",
             "title": "Final Year Project - I",
-            "credits": "0+2"
+            "credits": "0+2",
+            "prerequisite": null
           }
         },
         {
@@ -111,28 +217,26 @@
             "serial": "2",
             "code": "HU-210",
             "title": "Technical Writing",
-            "credits": "3+0"
+            "credits": "3+0",
+            "prerequisite": null
           },
           "valid": {
             "serial": "3",
             "code": "HU-212",
             "title": "Technical & Business Writing",
-            "credits": "3+0"
+            "credits": "3+0",
+            "prerequisite": "HU-114, Functional English"
           }
         },
         {
-          "type": "code-mismatch",
-          "fetched": {
-            "serial": "5",
-            "code": "HU-107",
-            "title": "Pakistan Studies",
-            "credits": "2+0"
-          },
-          "valid": {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
             "serial": "6",
             "code": "HU 107",
             "title": "Pakistan Studies",
-            "credits": "2+0"
+            "credits": "2+0",
+            "prerequisite": null
           }
         }
       ]
@@ -140,21 +244,23 @@
     {
       "name": "Semester-8",
       "validKey": "Semester 8",
-      "diffCount": 2,
+      "diffCount": 6,
       "diffs": [
         {
           "type": "code-mismatch",
           "fetched": {
-            "serial": "4",
+            "serial": "5",
             "code": "DS-499",
             "title": "Final Year Project-II",
-            "credits": "0+4"
+            "credits": "0+4",
+            "prerequisite": "DS-498"
           },
           "valid": {
             "serial": "1",
             "code": "CS-250",
             "title": "Final Year Project - II",
-            "credits": "0+4"
+            "credits": "0+4",
+            "prerequisite": "DS-498, Final Year Project - I"
           }
         },
         {
@@ -163,28 +269,120 @@
             "serial": "1",
             "code": "CCE-401",
             "title": "Civic and Community Engagement",
-            "credits": "1+1"
+            "credits": "1+1",
+            "prerequisite": null
           },
           "valid": {
             "serial": "3",
             "code": "CS-2XX",
             "title": "Civic and Community Engagement",
-            "credits": "1+1"
+            "credits": "1+1",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "2",
+            "code": "SE-200",
+            "title": "Software Engineering*",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "4",
+            "code": "HU-223",
+            "title": "Professional Ethics (Any Course from General Education Requirements)",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "extra-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "3",
+            "code": "HU-127",
+            "title": "Ideology and Constitution of Pakistan.",
+            "credits": "2+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "extra-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "4",
+            "code": "HU-222",
+            "title": "Professional Ethics",
+            "credits": "2+0",
+            "prerequisite": null
           }
         }
       ]
     },
     {
-      "name": "For Pre- medical Students only (Semester-1)",
+      "name": "(extra in valid) For Pre- medical Students only (Semester-1)",
       "validKey": "For Pre- medical Students only (Semester-1)",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "3.b",
+            "code": "MATH-162",
+            "title": "Pre-Mathematics-1 (in place of MATH-161)",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "4.b",
+            "code": "MATH-163",
+            "title": "Pre-Mathematics-2 (in place of MATH-101)",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        }
+      ]
     },
     {
-      "name": "For Pre- medical Students only (Semester-2)",
+      "name": "(extra in valid) For Pre- medical Students only (Semester-2)",
       "validKey": "For Pre- medical Students only (Semester-2)",
-      "diffCount": 0,
-      "diffs": []
+      "diffCount": 2,
+      "diffs": [
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "4.b",
+            "code": "MATH-161",
+            "title": "Discrete Mathematics (in place of MATH-234)",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        },
+        {
+          "type": "missing-in-fetched",
+          "count": 1,
+          "course": {
+            "serial": "5.b",
+            "code": "MATH-101",
+            "title": "Calculus & Analytical Geometry (in place of MATH-222",
+            "credits": "3+0",
+            "prerequisite": null
+          }
+        }
+      ]
     },
     {
       "name": "(extra in valid) For Pre- medical Students only",
@@ -198,7 +396,8 @@
             "serial": "1",
             "code": "MATH-234",
             "title": "Multivariable Calculus",
-            "credits": "3+0"
+            "credits": "3+0",
+            "prerequisite": "Math-101, Calculus & Analytical Geometry"
           }
         },
         {
@@ -208,7 +407,8 @@
             "serial": "2",
             "code": "MATH-222",
             "title": "Linear Algebra",
-            "credits": "3+0"
+            "credits": "3+0",
+            "prerequisite": "Math-101, Calculus & Analytical Geometry"
           }
         }
       ]
